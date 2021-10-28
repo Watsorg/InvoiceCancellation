@@ -6,12 +6,24 @@ package com.myspace.invoicecancellation;
 
 public class SampleRequest implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public SampleRequest() {
-    }
+	@org.kie.api.definition.type.Label(value = "Name")
+	private java.lang.String name;
 
+	public SampleRequest() {
+	}
 
+	public java.lang.String getName() {
+		return this.name;
+	}
 
+	public void setName(java.lang.String name) {
+		this.name = name;
+	}
+
+	public SampleRequest(java.lang.String name) {
+		this.name = name;
+	}
 
 }
