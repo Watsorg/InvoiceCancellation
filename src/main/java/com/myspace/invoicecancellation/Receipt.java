@@ -6,12 +6,59 @@ package com.myspace.invoicecancellation;
 
 public class Receipt implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Receipt() {
-    }
+	@org.kie.api.definition.type.Label(value = "Contract ID")
+	private java.lang.String contractId;
+	@org.kie.api.definition.type.Label(value = "Number")
+	private java.lang.Integer number;
+	@org.kie.api.definition.type.Label(value = "Apply By Receivable")
+	private java.lang.Boolean applyByReceivable;
+	@org.kie.api.definition.type.Label(value = "Apply By Invoice")
+	private java.lang.Boolean applyByInvoice;
 
+	public Receipt() {
+	}
 
+	public java.lang.String getContractId() {
+		return this.contractId;
+	}
 
+	public void setContractId(java.lang.String contractId) {
+		this.contractId = contractId;
+	}
+
+	public java.lang.Integer getNumber() {
+		return this.number;
+	}
+
+	public void setNumber(java.lang.Integer number) {
+		this.number = number;
+	}
+
+	public java.lang.Boolean getApplyByReceivable() {
+		return this.applyByReceivable;
+	}
+
+	public void setApplyByReceivable(java.lang.Boolean applyByReceivable) {
+		this.applyByReceivable = applyByReceivable;
+	}
+
+	public java.lang.Boolean getApplyByInvoice() {
+		return this.applyByInvoice;
+	}
+
+	public void setApplyByInvoice(java.lang.Boolean applyByInvoice) {
+		this.applyByInvoice = applyByInvoice;
+	}
+
+	public Receipt(java.lang.String contractId, java.lang.Integer number,
+			java.lang.Boolean applyByReceivable,
+			java.lang.Boolean applyByInvoice) {
+		this.contractId = contractId;
+		this.number = number;
+		this.applyByReceivable = applyByReceivable;
+		this.applyByInvoice = applyByInvoice;
+	}
 
 }
